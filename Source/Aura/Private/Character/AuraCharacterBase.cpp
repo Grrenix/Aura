@@ -13,8 +13,7 @@ AAuraCharacterBase::AAuraCharacterBase()
 
 }
 
-void AAuraCharacterBase::BeginPlay()
+UAbilitySystemComponent* AAuraCharacterBase::GetAbilitySystemComponent() const
 {
-	Super::BeginPlay();
-	
+	return AbilitySystemComponent;
 }
