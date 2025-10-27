@@ -3,7 +3,6 @@
 
 #include "UI/WidgetController/OverlayWidgetController.h"
 
-#include "HairStrandsInterface.h"
 #include "AbilitySystem/AuraAbilitySystemComponent.h"
 #include "AbilitySystem/AuraAttributeSet.h"
 
