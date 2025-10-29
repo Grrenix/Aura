@@ -14,22 +14,6 @@
 	GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
 
 
-// * Maybe a new way of reducing Boilerplate?
-
-#define ATTRIBUTE_DEFINITION(ClassName, PropertyName, CategoryLiteral) \
-	UPROPERTY(BlueprintReadOnly, Category = CategoryLiteral, ReplicatedUsing = OnRep_##PropertyName) \
-	FGameplayAttributeData PropertyName; \
-	ATTRIBUTE_ACCESSORS(ClassName, PropertyName); \
-	UFUNCTION() \
-	void OnRep_##PropertyName(const FGameplayAttributeData& Old##PropertyName);
-/*
-#define ATTRIBUTE_ONREP_DEFINITION(ClassName, Name) \
-	void ClassName::OnRep_##Name(const FGameplayAttributeData& Old##Name) \
-	{ \
-		GAMEPLAYATTRIBUTE_REPNOTIFY(ClassName, Name, Old##Name); \
-	}
- */
-
 USTRUCT()
 struct FEffectProperties
 {

@@ -1,4 +1,4 @@
-// Copyright Grrenix
+﻿// Copyright Grrenix
 
 
 #include "Character/AuraCharacter.h"
@@ -55,5 +55,10 @@ void AAuraCharacter::OnRep_PlayerState()
 	Super::OnRep_PlayerState();
 	
 	InitAbilityActorInfo();
+}
+
+int32 AAuraCharacter::GetPlayerLevel()
+{
+	return Cast<AAuraPlayerState>(GetPlayerState())->GetPlayerLevel();
 }
 
